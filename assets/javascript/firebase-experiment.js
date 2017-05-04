@@ -79,3 +79,11 @@ firebase.database().ref(thisUserID).child("totallDiff").push({
     two: "to children by skipping",
     three: "the other kids"
 });
+
+
+referencedDatabase.on("value", function (snapshot) {
+    console.log(snapshot.val());
+    console.log(snapshot.val().newBit);
+    console.log(snapshot.val().moreStuff);
+    console.log(snapshot.val().moreStuff.anotherLevel);
+});
